@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { TodoListItem } from './TodoListItem';
 
-function App() {
+const todos: Array<Todo> = [
+  {text: 'Calvin', complete: true}, 
+  {text: 'Coolidge', complete: true}, 
+  {text: 'Masha', complete: false}
+];
+
+const App: React.FunctionComponent = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    <TodoListItem todo={todos[0]} />;
+    <TodoListItem todo={todos[1]} />;
+    <TodoListItem todo={todos[2]} />;
+    </React.Fragment>
   );
-}
+};
 
 export default App;
