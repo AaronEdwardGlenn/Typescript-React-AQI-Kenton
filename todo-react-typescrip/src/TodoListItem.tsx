@@ -3,6 +3,7 @@ import "./TodoListItem.css";
 
 interface TodoListItemProps { 
     todo: Todo;
+    toggleTodo: ToggleTodo; 
 }
 
 export const TodoListItem: React.FunctionComponent<TodoListItemProps> = ({ todo }) => {
