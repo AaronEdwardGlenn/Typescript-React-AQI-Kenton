@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { TodoListItem } from './TodoListItem';
+import { AddTodoForm } from './AddTodoForm';
+import { TodoList } from './TodoList';
 
 const initialTodos: Array<Todo> = [
   {text: 'Calvin', complete: true}, 
@@ -30,9 +31,8 @@ const App: React.FunctionComponent = () => {
         TODO List with Typescript!
       </h1>
     </header>
-    <TodoListItem todo={todos[0]} toggleTodo={toggleTodo} />
-    <TodoListItem todo={todos[1]} toggleTodo={toggleTodo} />
-    <TodoListItem todo={todos[2]} toggleTodo={toggleTodo} />
+    <TodoList todos={todos} toggleTodo={toggleTodo} />
+    <AddTodoForm />
     </React.Fragment>
   );
 };
