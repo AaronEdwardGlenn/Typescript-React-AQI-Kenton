@@ -4,3 +4,5 @@ type Todo = {
   };
 
   type ToggleTodo = (selected: Todo) => void;
+
+  type AddTodo = (newTodo: string) => void; 

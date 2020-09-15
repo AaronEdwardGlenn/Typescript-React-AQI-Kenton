@@ -24,6 +24,11 @@ const App: React.FunctionComponent = () => {
     setTodos(newTodos);
 };
 
+  const addTodo: AddTodo = newTodo => {
+    newTodo.trim() !== "" && setTodos([...todos, { text: newTodo, complete: false }]); 
+}; 
+
+
   return (
     <React.Fragment>
     <header>
@@ -32,7 +37,8 @@ const App: React.FunctionComponent = () => {
       </h1>
     </header>
     <TodoList todos={todos} toggleTodo={toggleTodo} />
-    <AddTodoForm />
+    <AddTodoForm addTodo={addTodo} />
+
     </React.Fragment>
   );
 };
